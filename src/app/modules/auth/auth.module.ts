@@ -3,7 +3,9 @@ import { CommonModule } from '@angular/common';
 
 import { AuthRoutingModule } from './auth-routing.module';
 import { SignupComponent } from './signup/signup.component';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule} from '@angular/common/http'
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -11,7 +13,12 @@ import { SignupComponent } from './signup/signup.component';
   ],
   imports: [
     CommonModule,
-    AuthRoutingModule
-  ]
+    AuthRoutingModule,
+    HttpClientModule,
+    MatSnackBarModule,
+    FormsModule,
+    ReactiveFormsModule
+  ],
+  exports: [SignupComponent]
 })
 export class AuthModule { }
