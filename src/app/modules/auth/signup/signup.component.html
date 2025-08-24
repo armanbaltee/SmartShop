@@ -1,1 +1,49 @@
-<p>signup works!</p>
+<div class="main-container">
+    <div class="main-header">
+        <h2>Welcome to Smart Shop</h2>
+        <h4>Signup</h4>
+    </div>
+    <div class="main-body">
+        <div class="left-container">
+        <div class="image-side">
+            <img src="../../../../assets/cover.jpg" alt="">
+        </div>
+    </div>
+    <div class="right-container">
+        <div class="form">
+            <form [formGroup]="formData" (ngSubmit)="onSubmit()">
+                <div class="fname">
+                    <label for="fname">First Name</label>
+                    <input type="text" name="fname">
+                </div>
+                <div class="lname">
+                    <label for="lname">Last Name</label>
+                    <input type="text" name="lname">
+                </div>
+                <div class="phone">
+                    <label for="phone">Phone</label>
+                    <input type="text" name="phone">
+                </div>
+                <div class="email">
+                    <label for="email">Email</label>
+                    <input type="email" name="email">
+                </div>
+                <div class="password">
+                    <label for="password">Password</label>
+                    <input type="password" name="password">
+                </div>
+                <div class="password">
+                    <label for="password">Confirm Password</label>
+                    <input type="password" name="password">
+                </div>
+                <div class="submit-btn">
+                    <button type="submit">Signup</button>
+                </div>
+            </form>
+            <div class="logi-btn">
+                <p>Already have an account <button>Login</button></p>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
