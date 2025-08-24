@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { AuthService } from '../service/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -11,7 +12,7 @@ import { AuthService } from '../service/auth.service';
 export class SignupComponent {
 
   formData!: FormGroup
-  constructor(private formBuilder: FormBuilder, private snackBar: MatSnackBar, private authService: AuthService){ 
+  constructor(private formBuilder: FormBuilder, private snackBar: MatSnackBar, private authService: AuthService, private router: Router){ 
     this.formDatas();
   }
 
@@ -24,6 +25,7 @@ export class SignupComponent {
         password: ['', [Validators.required, Validators.minLength(8)]]
     })
   }
+  passwordChecker(){}
   onSubmit(){
     if(this.formData.invalid){
       this.snackBar.open('Error', 'Close', {
@@ -46,5 +48,9 @@ export class SignupComponent {
       })
       }
     })
+  }
+
+  loginPage(){
+    return this.router.navigate(['login'])
   }
 }
