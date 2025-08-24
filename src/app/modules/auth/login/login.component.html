@@ -1,0 +1,36 @@
+<div class="auth-container">
+  <div class="auth-header">
+    <h2>Welcome to <span>Smart Shop</span></h2>
+    <p>Signup</p>
+  </div>
+
+  <div class="auth-body">
+    <!-- Left Image -->
+    <div class="auth-image">
+      <img src="../../../../assets/cover.jpg" alt="Smart Shop">
+    </div>
+
+    <!-- Right Form -->
+    <div class="auth-form">
+      <form [formGroup]="loginFormData" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" formControlName="email" placeholder="Enter your email">
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" formControlName="password" placeholder="Enter your password">
+        </div>
+
+        <button type="submit" class="btn-primary">Signup</button>
+      </form>
+
+      <div class="auth-footer">
+        <p>Already have an account?
+          <button type="button" (click)="signupPage()">Login</button>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

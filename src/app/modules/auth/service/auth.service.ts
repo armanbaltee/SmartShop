@@ -12,4 +12,8 @@ export class AuthService {
   signupApiCall(payLoad:any){
     return this.http.post('signupUrl', payLoad)
   }
+
+  loginApiCall(payLoad:any){
+    return this.http.post('login', payLoad)
+  }
 }
